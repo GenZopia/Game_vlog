@@ -1,0 +1,65 @@
+    <div class="container main-content">
+
+      <!-- Breadcrumb navigation: Home > Category > Post Title -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;list-style:none;padding:0;margin:0;">
+          <li class="breadcrumb__item">
+            <a href="/index.html" class="breadcrumb__link">Home</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="/category/{CATEGORY_SLUG}.html" class="breadcrumb__link">{CATEGORY_NAME}</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__current" aria-current="page">{POST_TITLE}</span>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Breadcrumb JSON-LD -->
+      <script type="application/ld+json">
+{BREADCRUMB_JSON_LD}
+      </script>
+
+      <article class="article-layout" itemscope itemtype="https://schema.org/Article">
+
+        <div>
+          <!-- Article header -->
+          <header class="article-header">
+            <a href="/category/{CATEGORY_SLUG}.html" class="category-label category-label--{CATEGORY_SLUG}">{CATEGORY_NAME}</a>
+            <h1 class="article-title" itemprop="headline">{POST_TITLE}</h1>
+            <div class="article-meta">
+              <span class="article-meta__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                By <span itemprop="name">{AUTHOR}</span>
+              </span>
+              <time datetime="{DATE_ISO}" itemprop="datePublished">{DATE_DISPLAY}</time>
+            </div>
+          </header>
+
+          <!-- Hero image (must appear before article body, width ≥ 600) -->
+          <img
+            src="{HERO_IMAGE_URL}"
+            alt="{HERO_IMAGE_ALT}"
+            width="{HERO_IMAGE_WIDTH}"
+            height="{HERO_IMAGE_HEIGHT}"
+            class="post-hero-img"
+            itemprop="image"
+            loading="eager"
+          >
+
+          <!-- Article body -->
+          <div class="article-body" itemprop="articleBody">
+{BODY}
+          </div>
+        </div>
+
+      </article>
+
+      <!-- Related posts section (≥2 links from same category) -->
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+{RELATED_POSTS}
+        </div>
+      </section>
+
+    </div>

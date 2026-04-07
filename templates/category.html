@@ -1,0 +1,17 @@
+    <div class="container main-content">
+
+      <!-- Category page header -->
+      <header class="category-header">
+        <span class="category-label category-label--{CATEGORY_SLUG}">{CATEGORY_NAME}</span>
+        <h1 class="category-header__title">{CATEGORY_NAME}</h1>
+        <p class="category-header__desc">{CATEGORY_DESC}</p>
+      </header>
+
+      <!-- Post card grid — each card: hero thumbnail, title, category label, date, excerpt -->
+      <section aria-label="{CATEGORY_NAME} posts">
+        <div class="posts-grid">
+{POST_CARDS}
+        </div>
+      </section>
+
+    </div>
