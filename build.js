@@ -59,7 +59,8 @@ function buildHead(meta) {
   <link rel="canonical" href="${escAttr(canonicalUrl)}">${ogTags}
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">${jsonLd}`;
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8600182060320313" crossorigin="anonymous"></script>${jsonLd}`;
 }
 
 // ─── Escape helpers ───────────────────────────────────────────────────────────
