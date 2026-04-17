@@ -166,7 +166,7 @@ const CATEGORIES = {
   'gaming-news':    { name: 'Gaming News',     desc: 'Coverage of industry trends, announcements, and developments shaping the future of gaming.' },
 };
 
-const BASE_URL = 'https://gaminghub.example.com';
+const BASE_URL = 'https://www.genzopia.xyz';
 
 // ─── Template helpers ─────────────────────────────────────────────────────────
 
@@ -486,6 +486,9 @@ function build() {
 
   fs.writeFileSync(path.join(__dirname, 'dist/robots.txt'), generateRobots(), 'utf8');
   console.log('✓ dist/robots.txt');
+
+  fs.writeFileSync(path.join(__dirname, 'dist/_headers'), '/sitemap.xml\n  Content-Type: application/xml; charset=utf-8\n', 'utf8');
+  console.log('✓ dist/_headers');
 
   // Copy assets into dist/
   function copyDir(src, dest) {
