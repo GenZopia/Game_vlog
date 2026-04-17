@@ -491,6 +491,9 @@ function build() {
   fs.writeFileSync(path.join(__dirname, 'dist/_headers'), '/sitemap.xml\n  Content-Type: application/xml; charset=utf-8\n', 'utf8');
   console.log('✓ dist/_headers');
 
+  fs.writeFileSync(path.join(__dirname, 'dist/ads.txt'), 'google.com, pub-8600182060320313, DIRECT, f08c47fec0942fa0\n', 'utf8');
+  console.log('✓ dist/ads.txt');
+
   // Copy assets into dist/
   function copyDir(src, dest) {
     fs.mkdirSync(dest, { recursive: true });
